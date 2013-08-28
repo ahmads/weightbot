@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+var program = require('commander')
+  , weightbot = require('../')
+
+program
+  .version(require('../package.json').version)
+  .usage('<email> <password>')
+
+program
+  .command('* <email> <password>')
+  .action(function (email, password) {
+
+    weightbot.getData(email, password, function (err, data) {
+
+      if (err) return console.error(err.message)
+      console.log(data)
+    })
+  })
+
+program.parse(process.argv)

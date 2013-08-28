@@ -1,0 +1,26 @@
+{
+  "name": "weightbot",
+  "version": "0.0.1",
+  "description": "A thingy to get your data from weightbot.com",
+  "main": "index.js",
+  "bin": {
+    "weightbot": "./bin/weightbot"
+  },
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 1"
+  },
+  "repository": "https://github.com/ahmads/weightbot",
+  "keywords": [
+    "weightbot",
+    "tapbots",
+    "weight",
+    "export"
+  ],
+  "author": "Ahmad Salman",
+  "license": "MIT",
+  "dependencies": {
+    "request": "~2.27.0",
+    "cheerio": "~0.12.1",
+    "commander": "~2.0.0"
+  }
+}
