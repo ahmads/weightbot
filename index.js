@@ -14,8 +14,8 @@ exports.getData = function (email, password, callback) {
     if (res.statusCode !== 200) return callback(mkerr(res.statusCode))
 
     var token = ''
-    , $ = cheerio.load(body)
-    , tokenFields = $(TOKEN_FIELDNAME)
+      , $ = cheerio.load(body)
+      , tokenFields = $(TOKEN_FIELDNAME)
 
     if (tokenFields.length) token = tokenFields[0].attribs.value
     if (!token) return callback(mkerr(0))
